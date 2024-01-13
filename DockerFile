@@ -13,7 +13,7 @@ COPY course.py .
 # Run main.py when the container launches
 CMD ["python", "main.py"]
 #terminal
-#docker build -t allocation-app .
-#docker run allocation-app
+#docker build -t configuration-app .
+#docker run configuration-app
 
 
