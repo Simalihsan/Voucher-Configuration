@@ -1,0 +1,18 @@
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the Python scripts into the container
+COPY main.py .
+COPY voucheritem.py .
+COPY voucherconfiguration.py .
+COPY vouchersystem.py .
+
+# Run main.py when the container launches
+CMD ["python", "main.py"]
+#terminal code
+#docker build -t voucherconfiguration-app .
+#docker run voucherconfiguration-app
+
