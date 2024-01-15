@@ -2,17 +2,14 @@
 FROM python:3.9-slim
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /configuration-image
 
 # Copy the Python scripts into the container
-COPY main.py .
-COPY voucheritem.py .
-COPY voucherconfiguration.py .
-COPY vouchersystem.py .
+COPY ./ /configuration-image/
 
 # Run main.py when the container launches
 CMD ["python", "main.py"]
 #terminal code
-#docker build -t voucherconfiguration-app .
-#docker run voucherconfiguration-app
+#docker image build -t configuration-app:1.0
+#docker tag configuration-app simal4321/configuration-app:1.0
 
